@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 
+//Mensagem para Solicitar o Numero do Usuário
 void lerNumero (int seletor){
 	
 	printf ("********* CALCULADORA*********\n");
@@ -16,12 +17,13 @@ void lerNumero (int seletor){
 	
 }
 
+//Função Exibir Menu
 int mensagemOperacao (){
 	int operacao;
 	
 	printf ("********* CALCULADORA*********\n");
 	printf("*                             *\n");
-	printf("*        Escolha a opera��o:  *\n");
+	printf("*        Escolha a opera��o:  *\n");
 	printf("*     1 - para soma           *\n");
 	printf("*     2 - para subtracao      *\n");
 	printf("*     3 - para multiplicacao  *\n");
@@ -34,6 +36,8 @@ int mensagemOperacao (){
 	system("cls");
 	
  }
+
+ //Função Exibir Mensagem de Opção Inválida
  void mensagemOpcaoInvalida(){
  	system("cls");
 		printf ("********* CALCULADORA*********\n");
@@ -50,26 +54,30 @@ int mensagemOperacao (){
 		system("cls");
  }
  
-
+//Função Soma
  float soma( float numero1,float numero2){
  	float resultado=numero1+numero2;
  	return resultado;
  }
  
+ //Função Subtração
   float subtracao( float numero1,float numero2){
  	float resultado=numero1-numero2;
  	return resultado;
  }
  
+ //Função Multiplicação
   float multiplicacao( float numero1,float numero2){
  	float resultado=numero1*numero2;
  	return resultado;
  }
  
+ //Função Divisao
   float divisao( float numero1,float numero2){
  	float resultado=numero1/numero2;
  	return resultado;
  }
+ //Função par Imprimir o Resultado
   float mostrarResultado(float result){
   	printf ("********* CALCULADORA*********\n");
 	printf("*                             *\n");
@@ -87,19 +95,22 @@ void main () {
 	float n1, n2,resultado;
 	int opcao;
 	
+	//Verifica se a opção é válida
 	opcao=mensagemOperacao();
 	while (opcao>4 || opcao<1){
 		mensagemOpcaoInvalida();
 		opcao=mensagemOperacao();
 	}
-		
-		
 	system("cls");
+
+	//Input de Numeros
 	lerNumero(1);
 	scanf("%f",&n1);
 	system("cls");
 	lerNumero(2);
 	scanf("%f",&n2);
+
+	//seleção de operação e processamento do cálculo
 	switch (opcao){
 		case 1:
 			resultado=soma(n1,n2);
@@ -125,6 +136,8 @@ void main () {
 		default:
 			mensagemOpcaoInvalida();				
 	}
+
+	//Pergunta se deseja voltar ao início ou finalizar a calculadora.
 	printf("\nDigite 1 para Voltar ao Inicio ou Qualquer outra tecla para finalizar:\n");
 	scanf("%d",&opcao);
 	if (opcao==1){
