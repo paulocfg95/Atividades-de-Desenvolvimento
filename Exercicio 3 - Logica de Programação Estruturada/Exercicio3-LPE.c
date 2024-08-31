@@ -5,31 +5,31 @@
 
 void verificaParOuImpar(int numero){
 		if(numero%2==0)
-		printf("%d é par.\n",numero);
+		printf("%d Ã‰ par.\n",numero);
 	else 
-		printf("%d é ímpar. \n",numero);	
+		printf("%d Ã‰ Ã­mpar. \n",numero);	
 	
 }
 
 void verificaDivisivelpor3(int numero){
 	if(numero%3==0)
-		printf("%d é divisível por 3.\n",numero);
+		printf("%d Ã‰ divisÃ­vel por 3.\n",numero);
 	else 
-		printf("%d não é divisível por 3. \n",numero);
+		printf("%d NÃ£o Ã© divisÃ­vel por 3. \n",numero);
 	
 }
 void cubo(int numero){
 	int resultado;
 	resultado=pow(numero,3);
-	printf("O cubo de %d é %d\n",numero,resultado);
+	printf("O cubo de %d Ã© %d\n",numero,resultado);
 	}
-void main() {
+int main() {
 	setlocale(LC_ALL,"");
 	int opcao,n;
 	printf("Digite um numero!\n");
 	scanf("%d",&n);
 	system("cls");
-	printf("Escolha a operação desejada: \n 1 - Par ou Impar \n 2 - Verificar se é divisivel por 3 \n 3 - Cubo do número \n");
+	printf("Escolha a operaÃ§Ã£o desejada: \n 1 - Par ou Impar \n 2 - Verificar se Ã© divisivel por 3 \n 3 - Cubo do nÃºmero \n");
 	scanf("%d",&opcao);
 	system("cls");
 
@@ -52,5 +52,5 @@ void main() {
 			
 	}
 	
-
+return 0;
 }
